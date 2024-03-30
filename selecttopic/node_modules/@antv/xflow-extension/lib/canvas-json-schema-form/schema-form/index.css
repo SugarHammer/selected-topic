@@ -1,0 +1,83 @@
+.xflow-json-form {
+  height: 100%;
+}
+.xflow-json-form label {
+  font-size: 12px;
+}
+.xflow-json-form .ant-form-item {
+  margin-bottom: 12px;
+}
+.xflow-json-form .ant-form-item .ant-form-item-label {
+  padding-bottom: 4px;
+}
+.xflow-json-form .ant-form-item .ant-form-item-label > label {
+  color: #666;
+}
+.xflow-json-form .ant-form-item .ant-form-item-control .ant-checkbox-wrapper {
+  color: #666;
+}
+.xflow-json-form .ant-form-item-explain,
+.xflow-json-form .ant-form-item-extra {
+  font-size: 12px;
+}
+.xflow-json-form .ant-form-item-explain-error > div {
+  word-break: break-all;
+}
+.xflow-json-form .ant-form-item-extra {
+  margin-top: 4px;
+}
+.xflow-json-form .tabs {
+  flex-direction: column;
+  height: 100%;
+}
+.xflow-json-form .tabs .ant-tabs-nav {
+  box-shadow: 0 0 16px -5px rgba(0, 0, 0, 0.2);
+}
+.xflow-json-form .tabs .ant-tabs-nav .ant-tabs-nav-list {
+  width: 100%;
+}
+.xflow-json-form .tabs .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab {
+  font-size: 12px;
+}
+.xflow-json-form .tabs .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab-active {
+  border-bottom-width: 0;
+}
+.xflow-json-form .tabs .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn {
+  font-weight: normal;
+  text-align: center;
+}
+.xflow-json-form .tabs .ant-tabs-content-holder {
+  padding: 0 16px;
+  overflow-y: auto;
+}
+.xflow-json-form .tabs.xTab .ant-tabs-nav .ant-tabs-nav-list {
+  box-sizing: border-box;
+  height: 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #d9d9d9;
+}
+.xflow-json-form .tabs.xTab .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab {
+  background-color: #fff;
+}
+.xflow-json-form .tabs.xTab .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn {
+  width: 100%;
+}
+.xflow-json-form .tabs.singleTab .ant-tabs-tab {
+  width: 100%;
+}
+.xflow-json-form .tabs.coupleTab .ant-tabs-tab {
+  width: 50%;
+  margin-right: 0;
+  border-right-width: 0;
+}
+.xflow-json-form .tabs.coupleTab .ant-tabs-tab:last-of-type {
+  border-right-width: 1px;
+}
+.xflow-json-form .tabs.ternateTab .ant-tabs-tab {
+  width: 33%;
+  margin-right: 0;
+  border-right-width: 0;
+}
+.xflow-json-form .tabs.ternateTab .ant-tabs-tab:last-of-type {
+  border-right-width: 1px;
+}

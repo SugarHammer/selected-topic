@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.selecttopic.mapper.TopicMapper">
+    <resultMap id="TopicEntityMap" type="com.zy.selecttopic.entity.Topic">
+        <id column="tlid" property="tlid"/>
+        <result column="tlname" property="tlname"/>
+        <result column="tname" property="tname"/>
+        <result column="sname" property="sname"/>
+    </resultMap>
+    <resultMap id="STopicEntityMap" type="com.zy.selecttopic.entity.Topic">
+        <id column="tlid" property="tlid"/>
+        <result column="tlname" property="tlname"/>
+        <result column="tname" property="tname"/>
+        <result column="sname" property="sname"/>
+        <collection property="student" ofType="com.zy.selecttopic.entity.Student">
+            <id column="sid" property="sid"/>
+            <result column="sname" property="sname"/>
+            <result column="sqq" property="sqq"/>
+            <result column="sphone" property="sphone"/>
+        </collection>
+    </resultMap>
+
+    <!-- 插入数据：Integer insert(User user) -->
+    <insert id="insertTopic" useGeneratedKeys="true" keyProperty="tlid">
+        INSERT INTO
+            topic ( tlname, tid, tname, sname)
+        VALUES
+        ( #{tlname},#{tid} ,#{tname}, #{sname})
+    </insert>
+
+    <!-- 查询所有题目信息   -->
+    <select id="selectAllTopic" resultMap="TopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic
+    </select>
+
+    <!--  条件查询  -->
+    <select id="selectTopic" resultMap="TopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic
+        WHERE
+            tid = #{tid}
+    </select>
+
+<!--    模糊查询-->
+    <select id="selectLikeTopic" resultMap="TopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic
+        WHERE
+            tlname like concat ('%','${tlname}','%')
+    </select>
+
+
+<!--    学生查看中选结果-->
+    <select id="selectStudentTopic" resultMap="TopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic
+        WHERE
+            sname = #{sname}
+    </select>
+
+    <select id="selectTeacherTopic" resultMap="TopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic
+        WHERE
+            tname = #{tname}
+    </select>
+
+<!--    教师查看学生中选名单-->
+    <select id="selectSTopic" resultMap="STopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic right join student on topic.sname = student.sname
+        WHERE
+            topic.sname IS NOT NULL and tname = #{tname}
+    </select>
+
+    <!--  修改信息  -->
+    <update id="updateTopic">
+        UPDATE
+            topic
+        SET
+            tlname = #{tlname},
+            tid = #{tid},
+            tname = #{tname},
+            sname = #{sname}
+        WHERE
+            tlid = #{tlid}
+    </update>
+
+<!--    词云-->
+    <select id="selectTopicCiyun" resultMap="TopicEntityMap">
+        SELECT
+            tlname
+        FROM
+            topic
+    </select>
+
+<!--    基于五种技术进行分析-->
+    <select id="selectPHP" resultMap="TopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic
+        WHERE
+            tlname like '%PHP%'
+    </select>
+
+    <select id="selectSpringBoot" resultMap="TopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic
+        WHERE
+            tlname like '%SpringBoot%'
+    </select>
+
+    <select id="selectSpringMVC" resultMap="TopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic
+        WHERE
+            tlname like '%SpringMVC%'
+    </select>
+
+    <select id="selectHadoop" resultMap="TopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic
+        WHERE
+            tlname like '%Hadoop%'
+    </select>
+
+    <select id="selectAndroid" resultMap="TopicEntityMap">
+        SELECT
+            *
+        FROM
+            topic
+        WHERE
+            tlname like '%Android%'
+    </select>
+
+</mapper>

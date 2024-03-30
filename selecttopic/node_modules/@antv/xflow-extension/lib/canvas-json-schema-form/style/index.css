@@ -1,0 +1,31 @@
+.xflow-json-schema-form {
+  border-left: 1px solid #d9d9d9;
+}
+.xflow-json-schema-form-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.xflow-json-schema-form-header {
+  display: flex;
+  justify-content: space-evenly;
+  background: #fff;
+  border-bottom: 1px solid #d9d9d9;
+}
+.xflow-json-schema-form-header-title {
+  font-size: 16px;
+}
+.xflow-json-schema-form-footer {
+  display: flex;
+  justify-content: space-evenly;
+  background: #fff;
+  border-top: 1px solid #d9d9d9;
+}
+.xflow-json-schema-form-footer-title {
+  font-size: 16px;
+}
+.text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

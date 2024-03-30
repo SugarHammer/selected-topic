@@ -1,0 +1,1 @@
+{"version":3,"file":"interface.js","sourceRoot":"","sources":["../../src/canvas-collapse-panel/interface.tsx"],"names":[],"mappings":";AAuIA,MAAM,KAAW,oBAAoB,CAiBpC;AAjBD,WAAiB,oBAAoB;IACtB,uBAAE,GAAG,qBAAqB,CAAA;IAa1B,6BAAQ,GAAG,CAAO,KAAoB,EAAE,EAAE;QACrD,OAAO,KAAK,CAAC,UAAU,CAAS,qBAAA,EAAE,CAAC,CAAA;IACrC,CAAC,CAAA,CAAA;AACH,CAAC,EAjBgB,oBAAoB,KAApB,oBAAoB,QAiBpC"}

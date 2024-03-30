@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.selecttopic.mapper.TeacherMapper">
+    <resultMap id="TeacherEntityMap" type="com.zy.selecttopic.entity.Teacher">
+        <id column="tid" property="tid"/>
+        <result column="tname" property="tname"/>
+        <result column="tqq" property="tqq"/>
+        <result column="tphone" property="tphone"/>
+        <result column="tnum" property="tnum"/>
+    </resultMap>
+
+    <!-- 插入用户数据：Integer insert(User user) -->
+    <insert id="insertTeacher" useGeneratedKeys="true" keyProperty="tid">
+        INSERT INTO
+            teacher (tid, tname, tqq, tphone,tnum)
+        VALUES
+        (#{tid}, #{tname}, #{tqq}, #{tphone},#{tnum})
+    </insert>
+
+<!--    查询所有教师信息-->
+    <select id="selectAllTeacher" resultMap="TeacherEntityMap">
+        SELECT
+            *
+        FROM
+            teacher
+    </select>
+
+    <!-- 条件查询教师信息   -->
+    <select id="selectTeacher" resultMap="TeacherEntityMap">
+        select
+            *
+        FROM
+            teacher
+        WHERE
+            tid = #{tid}
+    </select>
+
+<!--    模糊查询-->
+    <select id="selectLikeTeacher" resultMap="TeacherEntityMap">
+        select
+            *
+        FROM
+            teacher
+        WHERE
+            tname like concat ('%','${tname}','%')
+            AND
+            tid like concat ('%','${tid}','%')
+    </select>
+
+    <!--    修改教师信息-->
+    <update id="updateTeacher">
+        UPDATE
+            teacher
+        SET
+            tname = #{tname},
+            tqq = #{tqq},
+            tphone = #{tphone},
+            tnum = #{tnum}
+        WHERE
+            tid = #{tid}
+    </update>
+    
+<!--    删除-->
+    <delete id="deleteTeacher">
+        DELETE FROM teacher
+        WHERE
+        tid = #{tid}
+    </delete>
+<!--    &lt;!&ndash; 根据用户名查询用户数据：User findByUsername(String username) &ndash;&gt;-->
+<!--    <select id="findByUsername" resultMap="UserEntityMap">-->
+<!--        SELECT-->
+<!--            *-->
+<!--        FROM-->
+<!--            user-->
+<!--        WHERE-->
+<!--            username = #{username}-->
+<!--    </select>-->
+</mapper>

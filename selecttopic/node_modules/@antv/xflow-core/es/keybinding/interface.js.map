@@ -1,0 +1,1 @@
+{"version":3,"file":"interface.js","sourceRoot":"","sources":["../../src/keybinding/interface.ts"],"names":[],"mappings":"AAIA,OAAO,EAAE,OAAO,EAAE,MAAM,cAAc,CAAA;AAEtC,MAAM,CAAC,MAAM,kBAAkB,GAAG,MAAM,CAAC,oBAAoB,CAAC,CAAA;AAK9D,8BAA8B;AAC9B,MAAM,CAAC,MAAM,uBAAuB,GAAG,OAAO,CAAC,WAAW,CAAC,yBAAyB,CAAC,CAAA;AAmDrF,MAAM,CAAC,MAAM,yBAAyB,GAAG,MAAM,CAAC,2BAA2B,CAAC,CAAA"}

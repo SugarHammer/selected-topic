@@ -1,0 +1,71 @@
+.flowchart-extension-container.xflow-app-workspace {
+  overflow: hidden;
+  border: 1px solid #d9d9d9;
+}
+.flowchart-extension-container.xflow-app-workspace .xflow-workspace-panel {
+  z-index: 1;
+  background: #fff;
+}
+.flowchart-extension-container.xflow-app-workspace svg {
+  overflow: visible !important;
+}
+.flowchart-extension-container.xflow-app-workspace .x6-edge {
+  stroke-width: 1px;
+}
+.flowchart-extension-container.xflow-app-workspace .x6-edge.x6-edge-selected path:nth-child(2) {
+  stroke: #3572f9;
+}
+.flowchart-extension-container.xflow-app-workspace .x6-edge:hover path:nth-child(2) {
+  stroke: #3572f9;
+}
+.flowchart-extension-container.xflow-app-workspace .x6-edge.hoverHighlight path:nth-child(2) {
+  stroke: #3572f9;
+}
+.flowchart-extension-container.xflow-app-workspace .x6-port > circle {
+  stroke: #69c0ff;
+}
+.flowchart-extension-container.xflow-app-workspace .x6-widget-transform {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #3572f9;
+  box-shadow: 0 4px 4px 0 #dbe6ff;
+}
+.flowchart-extension-container.xflow-app-workspace .x6-widget-transform > div {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border: 1px solid #3572f9;
+}
+.flowchart-extension-container.xflow-app-workspace .xflow-json-form .ant-tabs-content-holder {
+  padding: 0 !important;
+}
+.flowchart-container-collpase {
+  transition: left 0.5s;
+}
+.flowchart-container-collpase-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.flowchart-container-collpase-nodes {
+  border-right: 1px solid #d9d9d9;
+}
+.flowchart-container-collpase-icon {
+  position: absolute;
+  z-index: 99;
+  width: 20px;
+  color: #aaa;
+  font-size: 12px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+.flowchart-container-collpase-icon:hover {
+  color: #2b84c0;
+}
+.flowchart-container-collpase .xflow-workspace-panel {
+  transition: left 0.5s;
+}

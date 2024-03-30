@@ -1,0 +1,78 @@
+@keyframes xflow-processing-line {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+.dag-extension-container .x6-edge {
+  stroke-width: 1px;
+}
+.dag-extension-container .x6-edge.success path:nth-child(2) {
+  stroke: #d5d5d5 !important;
+}
+.dag-extension-container .x6-edge.success path:nth-child(3) {
+  fill: #d5d5d5 !important;
+  stroke: #d5d5d5 !important;
+}
+.dag-extension-container .x6-edge.error {
+  stroke-width: 2px;
+}
+.dag-extension-container .x6-edge.error path:nth-child(2) {
+  stroke: rgba(245, 34, 45, 0.45) !important;
+  stroke-width: 2px;
+}
+.dag-extension-container .x6-edge.processing path:nth-child(2) {
+  animation: xflow-processing-line 30s infinite linear;
+  stroke: rgba(57, 202, 116, 0.8);
+  stroke-width: 2px;
+  stroke-dasharray: 8px, 2px;
+}
+.dag-extension-container .x6-edge.x6-edge-selected path:nth-child(2) {
+  stroke: #1890ff;
+  stroke-width: 2px;
+}
+.dag-extension-container .x6-edge:hover path:nth-child(2) {
+  stroke: #1890ff;
+  stroke-width: 2px;
+}
+.dag-extension-container .x6-edge.hoverHighlight path:nth-child(2) {
+  stroke: #1890ff;
+  stroke-width: 2px;
+}
+.dag-extension-container .x6-port .xflow-port-group .xflow-port-arrow {
+  display: none;
+}
+.dag-extension-container .x6-port .xflow-port-group.available .xflow-port {
+  stroke: rgba(57, 202, 116, 0.6);
+  r: 8;
+  stroke-width: 8px;
+}
+.dag-extension-container .x6-port .xflow-port-group.connected .xflow-port-arrow {
+  display: block;
+}
+.dag-extension-container .x6-port .xflow-port-group.connected .xflow-port {
+  display: none;
+}
+.dag-extension-container .x6-port .xflow-port-group.adsorbed .xflow-port {
+  stroke: rgba(57, 202, 116, 0.85);
+  r: 10;
+  stroke-width: 10px;
+}
+.layout-top-bottom .x6-port .xflow-port-group .xflow-port-arrow {
+  display: none;
+}
+.layout-top-bottom .x6-port .xflow-port-group.connected .xflow-port-arrow {
+  display: block;
+}
+.layout-top-bottom .x6-port .xflow-port-group.connected .xflow-port {
+  display: none;
+}
+.layout-left-right .x6-port .xflow-port-group .xflow-port-arrow {
+  display: none;
+}
+.layout-left-right .x6-port .xflow-port-group.connected .xflow-port-arrow {
+  display: block;
+  transform: translate(0, 5px) rotate(270deg) !important;
+}
+.layout-left-right .x6-port .xflow-port-group.connected .xflow-port {
+  display: none;
+}

@@ -1,0 +1,13 @@
+.all{
+    height: 100vh;
+}
+.logo{
+    color: white;
+    /*width: 500px;*/
+    /*display: block;*/
+}
+.zhuxiao{
+    /*!*display: block;*!*/
+    /*text-align: right;*/
+    float: right;
+}

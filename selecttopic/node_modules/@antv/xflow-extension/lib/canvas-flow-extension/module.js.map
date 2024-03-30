@@ -1,0 +1,1 @@
+{"version":3,"file":"module.js","sourceRoot":"","sources":["../../src/canvas-flow-extension/module.ts"],"names":[],"mappings":";;;;AAAA,4BAAyB;AACzB,uBAAuB;AACvB,+CAA8C;AAC9C,6CAA4D;AAE5D,8DAAmC;AAEnC,mBAAmB;AACnB,IAAM,yBAAyB,GAAG;IAChC,OAAO,wBAAW,CAAC,MAAM,CAAC,UAAA,QAAQ;QAChC,sBAAsB;QACtB,QAAQ,CAAC,4BAAqB,CAAC,CAAA;IACjC,CAAC,CAAC,CAAA;AACJ,CAAC,CAAA;AAEQ,8DAAyB"}

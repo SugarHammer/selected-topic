@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.selecttopic.mapper.StudentMapper">
+    <resultMap id="StudentEntityMap" type="com.zy.selecttopic.entity.Student">
+        <id column="sid" property="sid"/>
+        <result column="sname" property="sname"/>
+        <result column="sqq" property="sqq"/>
+        <result column="sphone" property="sphone"/>
+    </resultMap>
+
+    <!-- 插入用户数据：Integer insert(User user) -->
+    <insert id="insertStudent" useGeneratedKeys="true" keyProperty="sid">
+        INSERT INTO
+            student (sid, sname, sqq, sphone)
+        VALUES
+        (#{sid}, #{sname}, #{sqq}, #{sphone})
+    </insert>
+
+    <!-- 查询所有学生信息   -->
+    <select id="selectAllStudent" resultMap="StudentEntityMap">
+        SELECT
+            *
+        FROM
+            student
+    </select>
+
+    <!--  条件查询  -->
+    <select id="selectStudent" resultMap="StudentEntityMap">
+        SELECT
+            *
+        FROM
+            student
+        WHERE
+            sid = #{sid}
+    </select>
+
+<!--    删除-->
+    <delete id="deleteStudent">
+        DELETE FROM
+            student
+        WHERE sid = #{sid}
+    </delete>
+
+    <!--  修改学生信息  -->
+    <update id="updateStudent">
+        UPDATE
+            student
+        SET
+            sname = #{sname},
+            sqq = #{sqq},
+            sphone = #{sphone}
+        WHERE
+            sid = #{sid}
+    </update>
+
+
+
+</mapper>

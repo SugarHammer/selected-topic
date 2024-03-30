@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.selecttopic.mapper.UserMapper">
+    <resultMap id="UserEntityMap" type="com.zy.selecttopic.entity.User">
+        <id column="uid" property="uid"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="role" property="role"/>
+        <result column="email" property="email"/>
+        <result column="salt" property="salt"/>
+        <result column="isDelete" property="isDelete"/>
+<!--        <result column="created_user" property="createdUser"/>-->
+<!--        <result column="created_time" property="createdTime"/>-->
+<!--        <result column="modified_user" property="modifiedUser"/>-->
+<!--        <result column="modified_time" property="modifiedTime"/>-->
+    </resultMap>
+
+    <!-- 插入用户数据：Integer insert(User user) -->
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="uid">
+        INSERT INTO
+            user (username, password, role, email,salt,isDelete)
+        VALUES
+        (#{username}, #{password}, #{role}, #{email},#{salt},#{isDelete})
+    </insert>
+
+    <!-- 根据用户名查询用户数据：User findByUsername(String username) -->
+    <select id="findByUsername" resultMap="UserEntityMap">
+        SELECT
+            *
+        FROM
+            user
+        WHERE
+            username = #{username}
+    </select>
+</mapper>

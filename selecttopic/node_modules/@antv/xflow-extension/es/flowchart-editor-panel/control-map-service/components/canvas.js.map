@@ -1,0 +1,1 @@
+{"version":3,"file":"canvas.js","sourceRoot":"","sources":["../../../../src/flowchart-editor-panel/control-map-service/components/canvas.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAA;AACzB,OAAO,EAAE,MAAM,EAAE,MAAM,aAAa,CAAA;AAEpC,MAAM,CAAC,MAAM,aAAa,GAAa,GAAG,EAAE;IAC1C,OAAO,CACL,6BAAK,SAAS,EAAE,GAAG,MAAM,eAAe;QACtC,uDAAgB,CACZ,CACP,CAAA;AACH,CAAC,CAAA"}
