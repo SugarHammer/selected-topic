@@ -5,7 +5,7 @@
 有BUG可留言加微
 
 #### 软件架构
-SpringBoot + Mybatis + Vue + Mysql
+Java + SpringBoot + Mybatis + Vue + Mysql
 
 
 #### 项目说明
