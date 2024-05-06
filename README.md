@@ -1,7 +1,7 @@
 # 毕业设计选题系统(数据库加VX获取☟)
 
 #### 介绍
-基于数据统计分析的毕业设计选题系统（springboot+vue）
+基于springboot的毕业设计选题系统（springboot+vue、带数据统计分析）
 有BUG可留言加微
 
 #### 软件架构
