@@ -1,4 +1,4 @@
-# 毕业设计选题系统(文末免费领取☟)
+# 毕业设计选题系统(文末获取方式☟)
 
 #### 介绍
 基于springboot的毕业设计选题系统（springboot+vue、带数据统计分析）
@@ -36,6 +36,7 @@ Java + SpringBoot + Mybatis + Vue + Mysql
 - idea/eclipse、jdk-1.8、maven-3.8.6、mysql、node.js
 
 ## 有项目修改、安装调试需求 请联系以下
-![关注免费领](联系.png)
+![获取方式](QQ.png)
 
 ## 获取资源扫☝☝☝
+
